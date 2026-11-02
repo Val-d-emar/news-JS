@@ -39,3 +39,32 @@ export interface NewsResponse extends NewsApiResponse {
 export interface SourcesResponse extends NewsApiResponse {
     sources?: Source[];
 }
+
+export enum Endpoint {
+    Sources = 'sources',
+    Everything = 'everything',
+}
+
+export enum HttpMethod {
+    GET = 'GET',
+    POST = 'POST',
+}
+
+export enum HttpStatus {
+    Unauthorized = 401,
+    NotFound = 404,
+}
+
+export type Callback<T> = (data: T) => void;
+
+export type RequestOptions = Partial<Record<string, string>>;
+
+export interface LoaderOptions {
+    apiKey?: string;
+    [key: string]: string | undefined;
+}
+
+export interface GetRespParams {
+    endpoint: Endpoint;
+    options?: RequestOptions;
+}
