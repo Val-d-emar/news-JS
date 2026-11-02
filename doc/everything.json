@@ -1,0 +1,32 @@
+{
+    "status": "ok",
+    "totalResults": 5594,
+    "articles": [
+        {
+            "source": {
+                "id": "abc-news",
+                "name": "ABC News"
+            },
+            "author": "Lalee Ibssa",
+            "title": "Trump says he'd 'encourage' Russia 'to do whatever the hell they want' if a NATO country didn't spend enough on defense",
+            "description": "Trump says he'd 'encourage' Russia 'to do whatever the hell they want' if a NATO country didn't spend enough on defensego.com",
+            "url": "https://abcnews.go.com/Politics/trump-russia-nato-defense-funds/story?id=107136736",
+            "urlToImage": "https://i.abcnewsfe.com/a/f7fa1ec8-ff43-4129-94e4-9ac1f51d267b/trump-conway-rally-2-11-24-mg_1707660493684_hpMain_16x9.jpg?w=1600",
+            "publishedAt": "2024-02-11T14:21:00Z",
+            "content": "Former President Donald Trump said he wouldn't protect a NATO nation that didn't contribute enough defense funds and he'd \"encourage\" Russia \"to do whatever the hell they want.\"\r\n\"You don't pay your … [+824 chars]"
+        },
+        {
+            "source": {
+                "id": "abc-news",
+                "name": "ABC News"
+            },
+            "author": "Meredith Deliso",
+            "title": "Overwhelming majority of Americans think Biden is too old for another term: POLL",
+            "description": "Most Americans (86%) think President Joe Biden is too old to serve another term as president, according to a new ABC News/Ipsos poll.",
+            "url": "https://abcnews.go.com/Politics/poll-americans-on-biden-age/story?id=107126589",
+            "urlToImage": "https://i.abcnewsfe.com/a/5e723bc0-b322-43d9-a2d5-24de593349d8/biden-ss-jt-240210_1707584612456_hpMain_16x9.jpg?w=1600",
+            "publishedAt": "2024-02-11T14:11:15Z",
+            "content": "An overwhelming majority of Americans think President Joe Biden is too old to serve another term, according to a new ABC News/Ipsos poll.\r\nAccording to the poll, conducted using Ipsos' Knowledge Pane… [+4677 chars]"
+        }
+    ]
+}
