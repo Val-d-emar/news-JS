@@ -1,5 +1,6 @@
 import './news.css';
 import { ReadonlyArticle } from '../../../types';
+import defaultPhoto from '../../../assets/news_placeholder.png';
 
 class News {
     draw(data: ReadonlyArticle[]) {
@@ -13,6 +14,13 @@ class News {
             return;
         }
 
+        if (data.length === 0) {
+            const emptyMessage = document.createElement('p');
+            emptyMessage.className = 'news__empty';
+            emptyMessage.textContent = 'No news found for this source.';
+            fragment.append(emptyMessage);
+        }
+
         news.forEach((item: ReadonlyArticle, idx) => {
             const newsClone = newsItemTemp.content.cloneNode(true) as DocumentFragment;
 
@@ -23,7 +31,7 @@ class News {
 
             const metaPhoto = newsClone.querySelector<HTMLElement>('.news__meta-photo');
             if (metaPhoto) {
-                metaPhoto.style.backgroundImage = `url(${item.urlToImage || 'img/news_placeholder.jpg'})`;
+                metaPhoto.style.backgroundImage = `url(${item.urlToImage || defaultPhoto})`;
             }
 
             const metaAuthor = newsClone.querySelector('.news__meta-author');
