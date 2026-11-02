@@ -13,23 +13,76 @@ header h1 {
     font-weight: 800;
 }
 
-footer {
-    height: 100px;
+footer.footer {
+    min-height: 80px;
+    padding: 20px 30px;
+    border-top: 1px solid #2a2c33;
+    background: #141518;
+}
+
+.footer__container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
 }
-footer .copyright {
+
+.footer__rss-logo {
+    display: block;
+    height: 32px;
+    width: auto;
+    transition: opacity 0.2s ease;
+}
+
+.footer__rss-logo:hover {
+    opacity: 0.8;
+}
+
+.footer__meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 14px;
-    color: #333;
-    text-align: center;
 }
+
+.footer__author {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.footer__author:hover {
+    color: #00bcd4;
+}
+
+.footer__year {
+    color: #888;
+}
+
+footer .copyright {
+    font-size: 13px;
+    color: #777;
+    margin: 0;
+}
+
 footer .copyright a {
-    color: #444;
+    color: #999;
+    text-decoration: none;
 }
+
 footer .copyright a:hover {
-    color: #555;
+    color: #bbb;
 }
-footer .copyright:before {
-    content: '©';
+
+@media (max-width: 600px) {
+    .footer__container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
 }
