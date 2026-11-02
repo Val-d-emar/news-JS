@@ -70,3 +70,5 @@ export interface GetRespParams {
 }
 
 export type SourceItem = Pick<Source, 'id' | 'name'>;
+
+export type ReadonlyArticle = Readonly<Article>;
