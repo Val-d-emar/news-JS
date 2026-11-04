@@ -1,35 +1,114 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     color: #fff;
     background: #17181c;
-    font-family: sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 header {
-    padding: 10px 30px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 20px 10px;
 }
 
 header h1 {
-    font-size: 40px;
+    margin: 0;
+    font-size: clamp(24px, 5vw, 40px);
     font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #f1f3f5;
 }
 
-footer {
-    height: 100px;
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
+footer.footer {
+    min-height: 80px;
+    padding: 20px 30px;
+    border-top: 1px solid #2a2c33;
+    background: #141518;
+}
+
+.footer__container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0 20px;
 }
-footer .copyright {
+
+.footer__rss-logo {
+    display: block;
+    height: 32px;
+    width: auto;
+    transition: opacity 0.2s ease;
+}
+
+.footer__rss-logo:hover {
+    opacity: 0.8;
+}
+
+.footer__meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 14px;
-    color: #333;
-    text-align: center;
 }
+
+.footer__author {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.footer__author:hover {
+    color: #00bcd4;
+}
+
+.footer__year {
+    color: #888;
+}
+
+footer .copyright {
+    font-size: 13px;
+    color: #777;
+    margin: 0;
+}
+
 footer .copyright a {
-    color: #444;
+    color: #999;
+    text-decoration: none;
 }
+
 footer .copyright a:hover {
-    color: #555;
+    color: #bbb;
 }
-footer .copyright:before {
-    content: '©';
+
+@media (max-width: 600px) {
+    .footer__container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
 }
