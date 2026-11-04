@@ -28,7 +28,8 @@
 
 .news__item .news__meta {
     position: relative;
-    height: 220px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
 }
 
@@ -44,7 +45,7 @@
 }
 
 .news__item:hover .news__meta-photo {
-    transform: scale(1.08) rotate(1deg);
+    transform: scale(1.04);
 }
 
 .news__item .news__meta-details {
@@ -170,7 +171,8 @@
 
     .news__item .news__meta {
         flex-basis: 40%;
-        height: auto;
+        width: auto;
+        aspect-ratio: auto;
         min-height: 240px;
     }
 
