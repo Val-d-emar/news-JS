@@ -4,12 +4,12 @@ class Loader {
     private readonly baseLink: string;
     private readonly options: LoaderOptions;
 
-    constructor(baseLink: string, options: LoaderOptions) {
+    public constructor(baseLink: string, options: LoaderOptions) {
         this.baseLink = baseLink;
         this.options = options;
     }
 
-    getResp<T>(
+    public getResp<T>(
         { endpoint, options = {} }: GetRespParams,
         callback: Callback<T> = () => {
             console.error('No callback for GET response');
@@ -18,7 +18,7 @@ class Loader {
         this.load<T>(HttpMethod.GET, endpoint, callback, options);
     }
 
-    errorHandler(res: Response) {
+    private errorHandler(res: Response): Response {
         if (!res.ok) {
             if (res.status === HttpStatus.Unauthorized || res.status === HttpStatus.NotFound)
                 console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
@@ -28,7 +28,7 @@ class Loader {
         return res;
     }
 
-    makeUrl(options: RequestOptions, endpoint: Endpoint) {
+    private makeUrl(options: RequestOptions, endpoint: Endpoint): string {
         const urlOptions: RequestOptions = { ...this.options, ...options };
         let url = `${this.baseLink}${endpoint}?`;
 
@@ -42,7 +42,7 @@ class Loader {
         return url.slice(0, -1);
     }
 
-    load<T>(method: HttpMethod, endpoint: Endpoint, callback: Callback<T>, options: RequestOptions = {}) {
+    private load<T>(method: HttpMethod, endpoint: Endpoint, callback: Callback<T>, options: RequestOptions = {}): void {
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
             .then((res: Response) => res.json() as Promise<T>)

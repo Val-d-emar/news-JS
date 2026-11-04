@@ -5,7 +5,7 @@ class App {
     private readonly controller: AppController;
     private readonly view: AppView;
 
-    constructor() {
+    public constructor() {
         this.controller = new AppController();
         this.view = new AppView();
     }

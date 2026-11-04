@@ -6,17 +6,17 @@ export class AppView {
     private readonly news: News;
     private readonly sources: Sources;
 
-    constructor() {
+    public constructor() {
         this.news = new News();
         this.sources = new Sources();
     }
 
-    drawNews(data?: NewsResponse) {
+    public drawNews(data?: NewsResponse): void {
         const values = data?.articles ?? [];
         this.news.draw(values);
     }
 
-    drawSources(data?: SourcesResponse) {
+    public drawSources(data?: SourcesResponse): void {
         const values = data?.sources ?? [];
         this.sources.draw(values);
     }

@@ -3,7 +3,7 @@ import { ReadonlyArticle } from '../../../types';
 import defaultPhoto from '../../../assets/news_placeholder.png';
 
 class News {
-    draw(data: ReadonlyArticle[]) {
+    public draw(data: ReadonlyArticle[]): void {
         const news = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
 
         const fragment = document.createDocumentFragment();
